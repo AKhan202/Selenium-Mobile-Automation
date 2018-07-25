@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="amazon.AcceleratorTestNGFullTest">
+        <methods>
+          <include name="dealerSettings"/>
+          <include name="onCommandLink"/>
+          <include name="mainTest"/>
+          <include name="customerInfo"/>
+        </methods>
+      </class> <!-- amazon.AcceleratorTestNGFullTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
