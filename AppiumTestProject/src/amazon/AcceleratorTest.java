@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+
 //import org.openqa.selenium.By;
 //import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -25,10 +26,10 @@ public class AcceleratorTest {
 
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "/Apps/AcceleratorApp/");
-		File app = new File(appDir, "Accelerator_debug3.0test.apk");
+		File app = new File(appDir, "Accelerator_1.7.3_QA.apk");
 
 		capabilities = new DesiredCapabilities();
-
+		
 		// capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("deviceName", "Galaxy Tab E");
 		capabilities.setCapability("autoWebview", "true");
@@ -42,13 +43,13 @@ public class AcceleratorTest {
 		capabilities.setCapability("appActivity", "com.navistar.writeup.AcceleratorActivity");
 		capabilities.setCapability("autoWebview", "true");
 		capabilities.setCapability("newCommandTimeout", 60 * 5);
-		capabilities.setCapability("chromedriverExecutable", "C:\\Users\\u01n233\\AppData\\Roaming\\npm\\node_modules\\chromedriver");
+	    capabilities.setCapability("chromedriverExecutable", "\"C:\\Users\\u01n233\\AppData\\Roaming\\npm\\node_modules\\chromedriver\\chromedriver.exe\"");
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		
 		String contexts = driver.getContext();
 		Set<String> contextNames = driver.getContextHandles();
 		for (String contextNameval : contextNames) {
-			System.out.println("Context Name " + contextNameval); // prints out something like [NATIVE_APP,	// WEBVIEW_<APP_PKG_NAME>]
+		System.out.println("Context Name " + contextNameval); // prints out something like [NATIVE_APP,	// WEBVIEW_<APP_PKG_NAME>]
 			
 		driver.context("WEBVIEW_com.navistar.writeup");
 		contexts = driver.getContext();
@@ -57,6 +58,7 @@ public class AcceleratorTest {
 		}
 		org.openqa.selenium.remote.RemoteWebElement el1 = (org.openqa.selenium.remote.RemoteWebElement) driver
 				.findElementByName("username");
+		//driver.findElementByName("username").click();
 		el1.click();
 		el1.sendKeys("u01n233");
 		// ("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView/android.webkit.WebView/android.view.View[4]/android.widget.GridView/android.view.View[1]/android.view.View[2]/android.widget.EditText");
@@ -75,7 +77,6 @@ public class AcceleratorTest {
 		
    	el1.click();
 		
-
 		driver.context("NATIVE_APP"); // (Now starts the Native part of the testing)
 		contexts = driver.getContext();
 		System.out.println("Android Activity " + driver.currentActivity());
