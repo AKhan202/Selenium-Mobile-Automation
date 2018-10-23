@@ -15,19 +15,21 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.touch.offset.PointOption;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 public class AcceleratorTestNGFullTest {
 	AndroidDriver<MobileElement> driver;
 
-	@BeforeTest
+
      	public void mainTest() throws MalformedURLException {
 		DesiredCapabilities capabilities;
 
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "/Apps/AcceleratorApp/");
-		File app = new File(appDir, "Accelerator_3.0Test_TimestampFix.apk");
+		File app = new File(appDir, "Accelerator-1.8.0.5.apk");
 
 		capabilities = new DesiredCapabilities();
 
@@ -53,37 +55,47 @@ public class AcceleratorTestNGFullTest {
 			System.out.println("Context Name " + contextNameval); // prints out something like [NATIVE_APP,
 																	// WEBVIEW_<APP_PKG_NAME>]
 		}
-		driver.context("WEBVIEW_com.navistar.writeup");
+		driver.context("NATIVE_APP");
 		contexts = driver.getContext();
 		System.out.println("Android Activity " + driver.currentActivity());
 		System.out.println("Current Context " + contexts);
 
-		org.openqa.selenium.remote.RemoteWebElement el1 = (org.openqa.selenium.remote.RemoteWebElement) driver
-				.findElementByName("username");
+	
+		MobileElement el1 = (MobileElement) driver.findElementById("username");
 		el1.click();
 		el1.sendKeys("u01n233");
-		// ("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView/android.webkit.WebView/android.view.View[4]/android.widget.GridView/android.view.View[1]/android.view.View[2]/android.widget.EditText");
-		org.openqa.selenium.remote.RemoteWebElement el2 = (org.openqa.selenium.remote.RemoteWebElement) driver
-				.findElementById("password");
+		
+		
+		MobileElement el2 = (MobileElement) driver.findElementById("password");
 		el2.click();
-		el2.sendKeys("Finley.12");
-		el1 = driver.findElementsByClassName("button").get(1); // It Logins here.//
-		System.out.println(" login button " + el1.toString());
-		String contexts1 = null;
+		el2.sendKeys("Cricket.12");
+		
+		
+		@SuppressWarnings("rawtypes")
+		TouchAction touchAction = new TouchAction(driver);
+		touchAction.tap(PointOption.point(1164, 596)).perform();
+		
+	    System.out.println(" login button " + el1.toString());
+ 	    String contexts1 = null;
 		System.out.println("Current Context for login button " + contexts1);
 		//ystem.out.println("L74- MobileElement" + el4.toString());
-		el1.click();
-
-	}
-	
-	
+	   // el1.click();
+		}
+     	
 	public void beforeTest1() {
-		driver.context("NATIVE_APP"); // (Now starts the Native part of the testing)
-		String contexts = driver.getContext();
-		System.out.println("Android Activity " + driver.currentActivity());
-		System.out.println("Current Context " + contexts);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
+		MobileElement el1 = (MobileElement) driver.findElementById("com.navistar.writeup:id/titanium_ui_checkbox");
+		el1.click();
+		
+		//driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup[2]/android.widget.FrameLayout/android.widget.Button").get(0).click();
 	}
+	
+     	
+	public void releaseNotes () {
+		
+		
+	}
+	
 	// Setting up Dealer Account//
 
 	@Test(priority = 1)
