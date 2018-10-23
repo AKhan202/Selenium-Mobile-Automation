@@ -20,7 +20,7 @@ public class Acclerator177 {
 	public void openLogin() throws MalformedURLException {
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "/Apps/AcceleratorApp/");
-		File app = new File(appDir, "Accelerator-1.7.9-BETA.apk");
+		File app = new File(appDir, "Accelerator.apk");
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -57,7 +57,7 @@ public class Acclerator177 {
 		
 		MobileElement el2 = (MobileElement) driver.findElementById("password");
 		el2.click();
-		el2.sendKeys("Finley.12");
+		el2.sendKeys("Cricket.12");
 		
 		driver.hideKeyboard();
 		
@@ -69,29 +69,89 @@ public class Acclerator177 {
 		el3.click();
 		System.out.println("Current Context for login button " + contexts);
 		
-				
+	}		
 	/// Release Notes ///
 		
-   
-		driver.findElementById("com.navistar.writeup:id/titanium_ui_checkbox").click();
+		public void releaseNotes() {
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup[2]/android.widget.FrameLayout/android.widget.Button")
+			.click();
+			
+			System.out.println("releasenotes printed");
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.FrameLayout[2]/android.widget.Button").click();
+			
+		}
 		
+			
+	// Setting up Dealer Account//
+	
+	public void dealerSettings() {
+		
+				
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.FrameLayout/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("Test Dealer");
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.FrameLayout[1]/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("610972");
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.FrameLayout[2]/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("000");
+		
+				
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.widget.FrameLayout/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("1000 darvey rd");
 		
 		TouchAction<?> touchAction = new TouchAction(driver);
-		touchAction.tap(PointOption.point(635, 671)).perform();
+		touchAction.tap(PointOption.point(1177, 599)).perform();
+		driver.hideKeyboard();
 		
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		// Setting up Dealer Account//
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.widget.FrameLayout[1]/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("Lisle");
 		
-	 driver.findElementByClassName("android.widget.Button").click();
-	
-
-	driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.FrameLayout/TextInputLayout/android.widget.FrameLayout/android.widget.EditText");
-		el1.sendKeys("Test Dealer");
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.widget.FrameLayout[2]/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("IL");
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.widget.FrameLayout[3]/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("60148");
+		
+		TouchAction<?> touchAction1 = new TouchAction(driver);
+		touchAction1.tap(PointOption.point(1172, 601)).perform();
+		
+						
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup/android.widget.FrameLayout/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("USA");
+		
+		TouchAction<?> touchAction2 = new TouchAction(driver);
+		touchAction1.tap(PointOption.point(1182, 599)).perform();
+		
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup/android.widget.FrameLayout/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("8749854785");
+		
+		
+		TouchAction<?> touchAction3 = new TouchAction(driver);
+		touchAction1.tap(PointOption.point(565, 565)).perform();
+		
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup/android.widget.FrameLayout/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+		.sendKeys("0000000000");
+				
+		
 	}
 
+	public void ocLink() {
+		
+		MobileElement el1 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.FrameLayout[2]/android.widget.Button");
+		el1.click();
+		
+	}
+	
 	public static void main(String[] args) throws MalformedURLException {
 		Acclerator177 myObj = new Acclerator177();
 		myObj.openLogin();
+		myObj.releaseNotes();
+		myObj.dealerSettings();
 
 	}
 

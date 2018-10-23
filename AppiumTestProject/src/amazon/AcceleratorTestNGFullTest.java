@@ -24,12 +24,12 @@ public class AcceleratorTestNGFullTest {
 	AndroidDriver<MobileElement> driver;
 
 
-     	public void mainTest() throws MalformedURLException {
+     public void mainTest() throws MalformedURLException {
 		DesiredCapabilities capabilities;
 
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "/Apps/AcceleratorApp/");
-		File app = new File(appDir, "Accelerator-1.8.0.5.apk");
+		File app = new File(appDir, "Accelerator.apk");
 
 		capabilities = new DesiredCapabilities();
 
@@ -260,6 +260,11 @@ public class AcceleratorTestNGFullTest {
 	public static void main(String[] args) throws MalformedURLException {
 		AcceleratorTestNGFullTest myObj = new AcceleratorTestNGFullTest();
 		myObj.mainTest();
+		myObj.beforeTest1();
+		myObj.releaseNotes();
+		myObj.dealerSettings();
+		myObj.onCommandLink();
+		myObj.customerInfo();
 
 	}
 }
