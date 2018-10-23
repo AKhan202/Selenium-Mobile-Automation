@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class NewAcceleratorTestNG {
 	AndroidDriver<MobileElement> driver;
@@ -59,7 +60,7 @@ public class NewAcceleratorTestNG {
 		org.openqa.selenium.remote.RemoteWebElement el2 = (org.openqa.selenium.remote.RemoteWebElement) driver
 				.findElementById("password");
 		el2.click();
-		el2.sendKeys("Lombard.12");
+		el2.sendKeys("Cricket.12");
 
 		driver.hideKeyboard();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -110,8 +111,10 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.EditText")
 				.sendKeys("1000 Darvey rd");
 
-		(new TouchAction(driver)).tap(1160, 591).perform();
-
+		
+		TouchAction<?> touchAction = new TouchAction(driver);
+		touchAction.tap(PointOption.point(1160, 591)).perform();
+		
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 
 		driver.hideKeyboard();
@@ -125,9 +128,10 @@ public class NewAcceleratorTestNG {
 				.sendKeys("Lisle");
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 
-		(new TouchAction(driver)).tap(1163, 594).perform();
-		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
-
+		
+		TouchAction<?> touchAction1 = new TouchAction(driver);
+		touchAction1.tap(PointOption.point(1163, 594)).perform();
+		
 		driver.findElementByXPath(
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.EditText")
 				.click();
@@ -136,7 +140,11 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.EditText")
 				.sendKeys("IL");
 		// el3.sendKeys("IL");
-		(new TouchAction(driver)).tap(1160, 597).perform();
+		
+		TouchAction<?> touchAction2 = new TouchAction(driver);
+		touchAction2.tap(PointOption.point(1160, 597)).perform();
+		
+		
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 
 		driver.findElementByXPath(
@@ -147,7 +155,10 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.widget.FrameLayout[3]/android.widget.EditText")
 				.sendKeys("60786");
 
-		(new TouchAction(driver)).tap(1169, 600).perform();
+		TouchAction<?> touchAction3 = new TouchAction(driver);
+		touchAction3.tap(PointOption.point(1169, 600)).perform();
+		
+		
 		// el3.sendKeys("60786");
 		
 		driver.hideKeyboard();
@@ -160,7 +171,10 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.EditText")
 				.sendKeys("USA");
 
-		(new TouchAction(driver)).tap(1173, 594).perform();
+		TouchAction<?> touchAction4 = new TouchAction(driver);
+		touchAction4.tap(PointOption.point(1173, 594)).perform();
+		
+		
 		///driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		driver.hideKeyboard();
 	///	driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
@@ -172,7 +186,10 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.EditText")
 				.sendKeys("8467927729");
 
-		(new TouchAction(driver)).tap(566, 566).perform();
+		TouchAction<?> touchAction5 = new TouchAction(driver);
+		touchAction5.tap(PointOption.point(566, 566)).perform();
+		
+		
 		driver.hideKeyboard();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 
@@ -181,8 +198,11 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup/android.widget.FrameLayout/android.widget.EditText")
 				.sendKeys("1234567890");
 
-		(new TouchAction(driver)).tap(575, 566).perform();
-
+		
+		TouchAction<?> touchAction6 = new TouchAction(driver);
+		touchAction6.tap(PointOption.point(575, 566)).perform();
+		
+		
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 
 		el3 = driver.findElementsByClassName("android.widget.Button").get(1);
@@ -198,8 +218,10 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText")
 				.sendKeys("9D848B77");
 
-		(new TouchAction(driver)).tap(1169, 591).perform();
-
+		TouchAction<?> touchAction7 = new TouchAction(driver);
+		touchAction7.tap(PointOption.point(1169, 591)).perform();
+		
+	
 		// el3 = (MobileElement)
 		driver.findElementByXPath(
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText")
@@ -208,7 +230,10 @@ public class NewAcceleratorTestNG {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.support.v4.view.ViewPager/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.EditText")
 				.sendKeys("Bpg1ZN4q8xR0Gm");
 
-		(new TouchAction(driver)).tap(1173, 597).perform();
+		TouchAction<?> touchAction8 = new TouchAction(driver);
+		touchAction8.tap(PointOption.point(1173, 597)).perform();
+		
+		
 
 		// driver.hideKeyboard();
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
@@ -475,7 +500,7 @@ public class NewAcceleratorTestNG {
 
 		// Scroll Down//
 
-		(new TouchAction(driver)).press(1210, 661).moveTo(10, -143).release().perform();
+		//(new TouchAction(driver)).press(1210, 661).moveTo(10, -143).release().perform();
 
 		// CONFIRM:
 		driver.findElementByXPath(

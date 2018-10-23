@@ -7,7 +7,6 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/u01n233/Downloads/Appium/commons-lang3-3.7-bin.tar/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/u01n233/Downloads/Appium/commons-lang3-3.7-bin.tar/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7-tests.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/u01n233/Downloads/Appium/commons-lang3-3.7-bin.tar/commons-lang3-3.7-bin/commons-lang3-3.7/commons-lang3-3.7-test-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Android/android-sdk/platforms/android-27/android.jar"/>
 	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/u01n233/Downloads/Selinum/selenium-java-3.12.0/client-combined-3.12.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/u01n233/Downloads/Selinum/selenium-java-3.12.0/client-combined-3.12.0-sources.jar"/>
@@ -25,8 +24,11 @@
 	<classpathentry kind="lib" path="C:/Users/u01n233/Downloads/Appium/httpcore-4.4.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/u01n233/Downloads/Selinum/javax.websocket-client-api-1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/u01n233/Downloads/Selinum/tyrus-standalone-client-1.13.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/u01n233/Downloads/Appium/java-client-6.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/u01n233/Downloads/selenium-server-standalone-jar-3.8.1/selenium-server-standalone-jar-3.8.1/package/jar/selenium-server-standalone-3.8.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/u01n233/Downloads/Appium/appium.webdriver.3.0.0.2.nupkg"/>
+	<classpathentry kind="lib" path="C:/Users/u01n233/Downloads/Appium/java-client-6.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Android/android-sdk/platforms/android-25/android.jar"/>
+	<classpathentry kind="lib" path="C:/Android/android-sdk/platforms/android-25/android-stubs-src.jar"/>
+	<classpathentry kind="lib" path="C:/Android/android-sdk/platforms/android-25/uiautomator.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

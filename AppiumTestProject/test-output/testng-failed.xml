@@ -7,7 +7,6 @@
         <methods>
           <include name="dealerSettings"/>
           <include name="onCommandLink"/>
-          <include name="mainTest"/>
           <include name="customerInfo"/>
         </methods>
       </class> <!-- amazon.AcceleratorTestNGFullTest -->
